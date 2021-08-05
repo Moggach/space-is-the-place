@@ -50,7 +50,7 @@ body {
 }
 
 header {
-  padding: 0 8vw 0 8vw;
+  padding: 8vw 8vw 0 8vw;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ header {
     rgba(2, 0, 36, 0) 0%,
     rgb(255, 255, 255) 60%
   );
+  width: 100%;
 }
 
 footer {
@@ -105,7 +106,7 @@ footer {
 
 main {
   padding: 0 8vw 0 8vw;
-  margin-top: 21.2rem;
+  margin-top: 22rem;
   flex: 1;
 }
 
@@ -128,7 +129,6 @@ h1 {
 li {
   list-style: none;
   margin-bottom: 1.5rem;
-  width: 84vw;
 }
 
 .red {
@@ -223,6 +223,7 @@ img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 0.5em;
+  object-fit: cover;
 }
 
 @media (min-width: 600px) {
@@ -230,7 +231,7 @@ img {
     flex-direction: row;
     gap: 1.5rem;
     height: 15rem;
-    padding: 4rem 3.3rem 0 3.3rem;
+    padding: 2.9rem 3.3rem 0 3.3rem;
     background: rgb(2, 0, 36);
     background: linear-gradient(
       0deg,
@@ -239,8 +240,13 @@ img {
     );
     width: 100%;
   }
+
+  footer {
+    height: 9rem;
+  }
+
   main {
-    margin-top: 10rem;
+    margin-top: 8.5rem;
     padding: 0 3.3rem 0 3.3rem;
   }
 
@@ -253,6 +259,10 @@ img {
   }
   li {
     margin-bottom: 0;
+    width: 84vw;
+  }
+  .footer--text {
+    height: 2.3rem;
   }
 }
 
