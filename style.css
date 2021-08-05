@@ -157,7 +157,7 @@ li {
   width: 100%;
   padding: 12px 10px;
   outline: 0;
-  border: 3px solid rgb(153, 255, 0);
+  border: 3px outset rgb(0, 0, 0);
   border-radius: 0.5em;
   background: #ffffff;
   color: #000000;
@@ -168,15 +168,15 @@ li {
 }
 
 .select select[id='rover'] {
-  border: 3px solid var(--green);
+  border: 3px outset var(--green);
 }
 
 .select select[id='camera'] {
-  border: 3px solid var(--blue);
+  border: 3px outset var(--blue);
 }
 
 .select select[id='date'] {
-  border: 3px solid var(--red);
+  border: 3px outset var(--red);
 }
 
 .select select::-ms-expand {
@@ -228,26 +228,42 @@ img {
 @media (min-width: 600px) {
   header {
     flex-direction: row;
+    gap: 1.5rem;
+    height: 15rem;
+    padding: 4rem 3.3rem 0 3.3rem;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgb(255, 255, 255) 60%
+    );
+    width: 100%;
   }
+  main {
+    margin-top: 10rem;
+    padding: 0 3.3rem 0 3.3rem;
+  }
+
   section {
     grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    margin-top: 0;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 900px) {
   section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
   section {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1600px) {
-  section {
-    grid-template-columns: repeat(5, 1fr);
   }
 }
