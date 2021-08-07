@@ -1,4 +1,3 @@
-
 //assigning endpoints to variables
 const api_url_curiosity =
   "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=KtmZvO7i1yyVYq7m46Nhw0FYlgo1M2Lr6PW0XY10&sol=999";
@@ -16,11 +15,10 @@ const api_url_curiosity_back =
   "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=KtmZvO7i1yyVYq7m46Nhw0FYlgo1M2Lr6PW0XY10&sol=100&camera=RHAZ";
 
 const api_url_latest =
-"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=KtmZvO7i1yyVYq7m46Nhw0FYlgo1M2Lr6PW0XY10";
-
+  "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=KtmZvO7i1yyVYq7m46Nhw0FYlgo1M2Lr6PW0XY10";
 
 //selecting image container
-const section = document.querySelector('.image-container');
+const section = document.querySelector(".image-container");
 
 // Defining async function
 async function getapi(url) {
@@ -29,64 +27,61 @@ async function getapi(url) {
 
   // Storing data in form of JSON
   let data = await response.json();
+  console.log(data);
 
   //if statement to deal with different shaped object coming back from latest photos endpoint
-   if (url.includes("latest")==true){
-    
+  if (url.includes("latest") == true) {
     let array = Array.from(data.latest_photos);
     array.forEach((element) => {
-    section.innerHTML += `<div class="section--image"><img src="${element.img_src}"></div>`;
-      });
-   }
-   else {
+      section.innerHTML += `<div class="section--image"><img src="${element.img_src}" 
+      alt="image from Mars rover ${element.rover.name} taken on ${element.earth_date}"></div>`;
+    });
+  } else {
     let array = Array.from(data.photos);
-  
-    array.forEach((element) => {
-    section.innerHTML += `<div class="section--image"><img src="${element.img_src}"></div>`;
-  });
- }
-}
 
+    array.forEach((element) => {
+      section.innerHTML += `<div class="section--image"><img src="${element.img_src}" 
+    alt="image from Mars rover ${element.rover.name} taken on ${element.earth_date}"></div>`;
+    });
+  }
+}
 
 //reset the content between selections
 function reset() {
-    section.innerHTML = " ";
-
+  section.innerHTML = " ";
 }
 
 //add event listener to rover select menu and run getapi function on change
-document.getElementById('rover').addEventListener('change', function() {
-     if (this.value == 'opportunity') {
-        reset() 
-        getapi(api_url_opportunity)}
-     else if(this.value == 'spirit') {
-        reset() 
-         getapi(api_url_spirit)}
-     else {
-        reset()
-        getapi(api_url_curiosity)}
-
-  });
-
+document.getElementById("rover").addEventListener("change", function () {
+  if (this.value == "opportunity") {
+    reset();
+    getapi(api_url_opportunity);
+  } else if (this.value == "spirit") {
+    reset();
+    getapi(api_url_spirit);
+  } else {
+    reset();
+    getapi(api_url_curiosity);
+  }
+});
 
 //add event listener to camera select menu and run getapi function on change
-document.getElementById('camera').addEventListener('change', function() {
-    if (this.value == 'front-hazard') {
-       reset() 
-       getapi(api_url_curiosity_front)}
-    else {
-       reset()
-       getapi(api_url_curiosity_back)}
+document.getElementById("camera").addEventListener("change", function () {
+  if (this.value == "front-hazard") {
+    reset();
+    getapi(api_url_curiosity_front);
+  } else {
+    reset();
+    getapi(api_url_curiosity_back);
+  }
+});
 
-
- });
-
-  //add event listener to date select menu and run getapi function on change
-  document.getElementById('date').addEventListener('change', function() {
-    if (this.value == 'latest-curiosity') {
-       reset() 
-       getapi(api_url_latest)}
- });
- 
+//add event listener to date select menu and run getapi function on change
+document.getElementById("date").addEventListener("change", function () {
+  if (this.value == "latest-curiosity") {
+    reset();
+    getapi(api_url_latest);
+  }
+});
 
 //
