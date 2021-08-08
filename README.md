@@ -30,10 +30,6 @@ and between two cameras:
 
 📷 Rear Hazard
 
-The Get Latest Photos option fetches the latest images from the main Curiosity rover:
+The astronaut animation lets the user know that the images are loading:
 
-![](get_latest.png)
-
-The rocket animation lets the user know that the images are loading:
-
-![](rocket.png)
+<img src= "https://media.giphy.com/media/fiH7QU2QHoP5hD5b2d/giphy.gif"></img>
