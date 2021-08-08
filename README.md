@@ -30,6 +30,10 @@ and between two cameras:
 
 📷 Rear Hazard
 
+Details of the rover are shown in the content bar across the bottom of the screen:
+
+![a bar showing details of the Mars rover](content_bar.png)
+
 The astronaut animation lets the user know that the images are loading:
 
 <img src= "https://media.giphy.com/media/fiH7QU2QHoP5hD5b2d/giphy.gif"></img>
