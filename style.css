@@ -226,6 +226,11 @@ img {
   object-fit: cover;
 }
 
+.loading {
+  width: 50%;
+  margin: 0 auto;
+}
+
 @media (min-width: 600px) {
   header {
     flex-direction: row;
@@ -260,6 +265,11 @@ img {
   li {
     margin-bottom: 0;
     width: 84vw;
+  }
+
+  .loading {
+    width: 30rem;
+    margin: 0 auto;
   }
   .footer--text {
     height: 2.3rem;
