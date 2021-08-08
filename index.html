@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <script DEFER src="script.js"></script>
 </head>
+
 <body>
-    <ul>
+    <header>
+
         <li>
             <div class="select">
                 <select name="logo" id="logo">
@@ -20,12 +22,11 @@
                 </select>
             </div>
         </li>
-    </ul>
-    <ul>
+
         <li>
             <div class="select">
                 <select name="rover" id="rover">
-                    <option value="">Select your rover</option>
+                    <option hidden>Select rover</option>
                     <option value="curiosity">Curiosity</option>
                     <option value="opportunity">Opportunity</option>
                     <option value="spirit">Spirit</option>
@@ -34,36 +35,24 @@
                 <div class="select_arrow" id="green"></div>
             </div>
         </li>
-    </ul>
-    <ul>
+
         <li>
             <div class="select">
                 <select name="camera" id="camera">
-                    <option value="">Select your camera</option>
+                    <option hidden>Select camera</option>
                     <option value="front-hazard">Front Hazard</option>
                     <option value="rear-hazard">Rear Hazard</option>
                 </select>
                 <div class="select_arrow" id="blue"></div>
             </div class="select">
         </li>
-    </ul>
-    <ul>
-        <li>
-            <div class="select">
-                <select name="date" id="date">
-                    <option value="">Get Latest Photos</option>
-                    <option value="latest-curiosity">Latest from Curiosity</option>
-                    <!--<option value="opportunity">July 2021</option>
-                    <option value="spirit">August 2021</option>-->
-                </select>
-                <div class="select_arrow" id="red"></div>
-            </div class="select">
-        </li>
-    </ul>
+
+
+
     </header>
 
     <main>
-       <div class="loading"></div>
+        <div class="loading"></div>
         <section class="image-container">
 
 
@@ -75,32 +64,10 @@
 
         <div class="footer--text">
             <div class="track">
-                <!-- <div class="content">&nbsp;rover: curiosity <span class="red">landing date: 10-05-2012</span> <span
-                        class='blue'>launch date: 05-03-201
 
-                    </span> <span class='green'>status:
-                        online</span> total photos: 35032&nbsp;rover: curiosity <span class="red">landing date:
-                        10-05-2012</span> <span class='blue'>launch date: 05-03-201
 
-                    </span> <span class='green'>status:
-                        online</span> total photos: 35032&nbsp;rover: curiosity <span class="red">landing date:
-                        10-05-2012</span> <span class='blue'>launch date: 05-03-201
 
-                    </span> <span class='green'>status:
-                        online</span> total photos: 35032</div> -->
-
-                <div class="content"><span class='green'>LOADING </span><span class='red'>LOADING </span><span
-                        class='blue'>LOADING </span><span class='green'>LOADING </span><span class='red'>LOADING
-                    </span><span class='blue'>LOADING </span><span class='green'>LOADING </span><span
-                        class='red'>LOADING </span><span class='blue'>LOADING </span><span class='green'>LOADING
-                    </span><span class='red'>LOADING </span><span class='blue'>LOADING </span><span
-                        class='green'>LOADING </span><span class='red'>LOADING </span><span class='blue'>LOADING
-                    </span><span class='green'>LOADING </span><span class='red'>LOADING </span><span
-                        class='blue'>LOADING </span><span class='green'>LOADING </span><span class='red'>LOADING
-                    </span><span class='blue'>LOADING </span><span class='green'>LOADING </span><span
-                        class='red'>LOADING </span><span class='blue'>LOADING </span><span class='green'>LOADING
-                    </span><span class='red'>LOADING </span><span class='blue'>LOADING </span><span
-                        class='green'>LOADING </span><span class='red'>LOADING </span><span class='blue'>LOADING </span>
+                <div class="content">
                 </div>
             </div>
 
